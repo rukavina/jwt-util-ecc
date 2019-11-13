@@ -79,7 +79,7 @@ class Point
     /**
      * @return Point
      */
-    public static function create(\GMP $x, \GMP $y, ?\GMP $order = null): self
+    public static function create(\GMP $x, \GMP $y, \GMP $order = null): self
     {
         return new self($x, $y, null === $order ? \gmp_init(0, 10) : $order);
     }

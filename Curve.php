@@ -76,7 +76,7 @@ class Curve
         return $this->size;
     }
 
-    public function getPoint(\GMP $x, \GMP $y, ?\GMP $order = null): Point
+    public function getPoint(\GMP $x, \GMP $y, \GMP $order = null): Point
     {
         if (!$this->contains($x, $y)) {
             throw new \RuntimeException('Curve '.$this->__toString().' does not contain point ('.Math::toString($x).', '.Math::toString($y).')');
